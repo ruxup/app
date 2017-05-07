@@ -4,10 +4,10 @@ import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-profile',
+  templateUrl: 'profile.html'
 })
-export class AboutPage {
+export class ProfilePage {
 
   constructor(public navCtrl: NavController) {
 
