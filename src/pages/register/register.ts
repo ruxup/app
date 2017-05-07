@@ -19,8 +19,8 @@ export class RegisterPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
     this.register = this.formBuilder.group({
       email: ['', Validators.required],
-      password: [''],
-      location: ['', Validators.required],
+      password: ['', Validators.required],
+      password_confirmation: ['', Validators.required],
     });
   }
 

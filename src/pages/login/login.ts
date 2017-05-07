@@ -14,25 +14,23 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  private todo: FormGroup;
+  private login: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
-    this.todo = this.formBuilder.group({
+    this.login = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
   logForm(){
-    console.log(this.todo.value)
+    console.log(this.login.value)
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Login');
   }
 
   register() {
-    console.log('clicked');
     this.navCtrl.push('RegisterPage');
   }
 

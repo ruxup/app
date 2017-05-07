@@ -9,16 +9,24 @@
     <ion-row class="forms" align-items-center>
       <ion-col>
         <form [formGroup]="register" (ngSubmit)="logForm()">
-          <ion-item>
-            <ion-input type="text" formControlName="email" placeholder="email"></ion-input>
+          <ion-item [class.invalid]="!register.controls.email.valid && (register.controls.email.dirty)">
+            <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
-
+          <div class="forms__label--invalid" *ngIf="!register.controls.email.valid && (register.controls.email.dirty)">
+            <p>Please enter a valid email</p>
+          </div>
+          <ion-item [class.invalid]="!register.controls.password.valid && (register.controls.password.dirty)">
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-input type="password" formControlName="password" placeholder="confirm password"></ion-input>
+          <div class="forms__label--invalid" *ngIf="!register.controls.password.valid && (register.controls.password.dirty)">
+            <p>Please enter a valid password</p>
+          </div>
+          <ion-item [class.invalid]="!register.controls.password_confirmation.valid && (register.controls.password_confirmation.dirty)">
+            <ion-input type="password" formControlName="password_confirmation" placeholder="Confirm Password"></ion-input>
           </ion-item>
+          <div class="forms__label--invalid" *ngIf="!register.controls.password_confirmation.valid && (register.controls.password_confirmation.dirty)">
+            <p>Please re-enter a match password</p>
+          </div>
 
           <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Register</button>
 

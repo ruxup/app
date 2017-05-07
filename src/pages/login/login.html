@@ -8,17 +8,17 @@
     </ion-row>
     <ion-row class="forms" align-items-center>
       <ion-col>
-        <form [formGroup]="todo" (ngSubmit)="logForm()">
-          <ion-item [class.invalid]="!todo.controls.email.valid && (todo.controls.email.dirty)">
-            <ion-input type="text" formControlName="email" placeholder="email"></ion-input>
+        <form [formGroup]="login" (ngSubmit)="logForm()">
+          <ion-item [class.invalid]="!login.controls.email.valid && (login.controls.email.dirty)">
+            <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
           </ion-item>
-          <div class="forms__label--invalid" *ngIf="!todo.controls.email.valid && (todo.controls.email.dirty)">
+          <div class="forms__label--invalid" *ngIf="!login.controls.email.valid && (login.controls.email.dirty)">
             <p>Please enter a valid email</p>
           </div>
-          <ion-item [class.invalid]="!todo.controls.password.valid && (todo.controls.password.dirty)">
-            <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
+          <ion-item [class.invalid]="!login.controls.password.valid && (login.controls.password.dirty)">
+            <ion-input type="password" formControlName="password" placeholder="Password" ></ion-input>
           </ion-item>
-          <div class="forms__label--invalid" *ngIf="!todo.controls.password.valid && (todo.controls.password.dirty)">
+          <div class="forms__label--invalid" *ngIf="!login.controls.password.valid && (login.controls.password.dirty)">
             <p>Please enter a valid password</p>
           </div>
           <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Login</button>
