@@ -12,16 +12,92 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
 @font-face {
   font-family: 'Proxima Nova';
   font-weight: normal;
   font-style: normal;
   src: url('../assets/fonts/Proxima Nova Semibold-webfont.eot');
-  src: url('../assets/fonts/Proxima Nova Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-       local('Proxima Nova Semibold'),
-       url('../assets/fonts/Proxima Nova Semibold-webfont.woff2') format('woff')
+  src: url('../assets/fonts/Proxima Nova Semibold-webfont.eot?#iefix') format('embedded-opentype'), local('Proxima Nova Semibold'), url('../assets/fonts/Proxima Nova Semibold-webfont.woff2') format('woff')
 }
+
+ion-icon {
+  &[class*="ruxup-"] {
+    // Instead of using the font-based icons
+    // We're applying SVG masks
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 0.5em;
+    height: 0.5em;
+  } // custom icons
+  &[class*="ruxup-home"] {
+    mask-image: url(../assets/icon/home.svg);
+    font-size: 10px;
+  }
+  &[class*="ruxup-home-outline"] {
+    mask-image: url(../assets/icon/home-outline.svg);
+  }
+  &[class*="ruxup-explore"] {
+    mask-image: url(../assets/icon/explore.svg);
+  }
+  &[class*="ruxup-explore-outline"] {
+    mask-image: url(../assets/icon/explore-outline.svg);
+  }
+  &[class*="icon-ios"] {
+    &[class*="ruxup-create"] {
+      mask-image: url(../assets/icon/create.svg);
+      font-size: 2.5em!important;
+    }
+    &[class*="ruxup-create-outline"] {
+      mask-image: url(../assets/icon/create-outline.svg);
+      font-size: 2.5em!important;
+    }
+  }
+  &[class*="icon-md"] {
+    &[class*="ruxup-create"] {
+      mask-image: url(../assets/icon/create.svg);
+      font-size: 6em!important;
+    }
+    &[class*="ruxup-create-outline"] {
+      mask-image: url(../assets/icon/create-outline.svg);
+      font-size: 6em!important;
+    }
+  }
+  &[class*="ruxup-profile"] {
+    mask-image: url(../assets/icon/profile.svg);
+  }
+  &[class*="ruxup-profile-outline"] {
+    mask-image: url(../assets/icon/profile-outline.svg);
+  }
+  &[class*="ruxup-events"] {
+    mask-image: url(../assets/icon/events.svg);
+  }
+  &[class*="ruxup-events-outline"] {
+    mask-image: url(../assets/icon/events-outline.svg);
+  }
+}
+
+.tab-button-icon .icon .ion-ios-ruxup-create {
+  font-size: 2.5em!important;
+}
+
+.tab-button-icon .icon .ion-ios-ruxup-create-outline {
+  font-size: 2.5em!important;
+}
+
+.icon-ios {
+  .ion-ios-ruxup-create {
+    font-size: 2.5em!important;
+  }
+}
+
+.icon-md {
+  .ion-md-ruxup-create {
+    font-size: 4em!important;
+  }
+}
+
 $font-family-md-base: "Proxima Nova Semibold";
 $font-family-ios-base: "Proxima Nova Semibold";
 $font-family-wp-base: "Proxima Nova Semibold";
