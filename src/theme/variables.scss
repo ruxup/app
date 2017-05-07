@@ -27,6 +27,7 @@ $tabs-border-color: transparent;
 
 $img-placeholder-background: white;
 
+
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -67,6 +68,8 @@ $tabs-ios-tab-icon-color: #253568;
 $tabs-ios-tab-min-height: 58px;
 $datetime-ios-padding-top: 15px;
 $datetime-ios-padding-bottom: 15px;
+$tabs-ios-tab-icon-size: 1.3em;
+
 
 // App Material Design Variables
 // --------------------------------------------------
@@ -83,6 +86,7 @@ $label-md-text-color: #263668;
 $tabs-md-tab-min-height: 58px;
 $datetime-md-padding-top: 15px;
 $datetime-md-padding-bottom: 15px;
+$tabs-md-tab-icon-size: 3.5em;
 
 // App Windows Variables
 // --------------------------------------------------

@@ -4,10 +4,10 @@ import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-events',
+  templateUrl: 'events.html'
 })
-export class ContactPage {
+export class EventsPage {
 
   constructor(public navCtrl: NavController) {
 
