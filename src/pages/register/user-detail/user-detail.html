@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Complete Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page-user-detail">
+  <ion-grid>
+
+    <ion-row align-items-center>
+      <ion-col>
+        <form [formGroup]="register" (ngSubmit)="next()">
+          <ion-label stacked>Name</ion-label>
+          <ion-item>
+            <ion-input type="text" formControlName="name" placeholder="Kimmy Kornelo"></ion-input>
+          </ion-item>
+
+          <ion-label stacked>Date of Birth</ion-label>
+          <ion-item>
+            <ion-datetime placeholder="19 November 1996" displayFormat="D MMMM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}"></ion-datetime>
+          </ion-item>
+
+          <ion-label stacked>Location</ion-label>
+          <ion-item>
+            <ion-input type="text" formControlName="location" placeholder="Location"></ion-input>
+          </ion-item>
+
+          <ion-label stacked>Select Gender</ion-label>
+
+          <ion-grid no-padding>
+            <ion-row align-items-center>
+              <ion-col col-6 style="padding-right: 5px;">
+                <div (click)="chooseGender('male')" class="btn_gender btn_gender--male" [ngClass]="{'btn_gender--active': (selectedGender == 'male')}">
+                  <ion-grid no-padding>
+                    <ion-row align-items-center>
+                      <ion-col col-6 text-center>
+                        <ion-img width="45" height="45" src="assets/images/icon_male.png"></ion-img>
+                      </ion-col>
+                      <ion-col col-6>
+                        <span>Male</span>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>                </div>
+              </ion-col>
+              <ion-col col-6 style="padding-left: 5px;">
+                <div (click)="chooseGender('female')" [ngClass]="{'btn_gender--active': (selectedGender == 'female')}" class="btn_gender btn_gender--female">
+                  <ion-grid no-padding>
+                    <ion-row align-items-center>
+                      <ion-col col-6 text-center>
+                        <ion-img width="45" height="45" src="assets/images/icon_female.png"></ion-img>
+                      </ion-col>
+                      <ion-col col-6>
+                        <span>Female</span>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Next</button>
+
+        </form>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

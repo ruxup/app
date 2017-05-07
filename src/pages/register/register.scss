@@ -1,0 +1,67 @@
+.page-register {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-color: #253568;
+  padding: 2em;
+  font-weight: 300;
+  .logo {
+    text-align: center;
+    margin-top: 35%;
+    &__image {
+      width: 250px;
+      margin-bottom: 15px;
+      background-size: 100% auto;
+      background-position: 0;
+    }
+  }
+  .forms {
+    p {
+      color: white;
+      text-align: right;
+    }
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 30px;
+    padding: 16px;
+    &__label {
+      &--invalid {
+        p {
+          color: white;
+          text-align: right;
+        }
+      }
+    }
+    .ios {
+      .button {
+        padding: 5px;
+        margin-top: 10px;
+      }
+    }
+    .button-md {
+      padding: 5px;
+      margin-top: 10px;
+      border-radius: 4px;
+      padding: 0 1em;
+      height: 2.8em;
+    }
+    .item-inner {
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+  .footer {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    &__link {
+      color: #bdbdbd;
+      span {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
