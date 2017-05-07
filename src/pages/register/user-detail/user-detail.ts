@@ -16,6 +16,7 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 export class UserDetailPage {
   private register: FormGroup;
   private dob: String;
+  private selectedGender: String;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
     this.register = this.formBuilder.group({
@@ -33,8 +34,13 @@ export class UserDetailPage {
     console.log('ionViewDidLoad Register');
   }
 
-  login(){
-    this.navCtrl.push('LoginPage');
+  next(){
+    this.navCtrl.push('InterestPage');
+  }
+
+  chooseGender(gender: String) {
+    this.selectedGender = gender;
+    console.log(gender);
   }
 
 }

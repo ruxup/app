@@ -25,7 +25,7 @@ $text-input-placeholder-color: #96a4ba;
 $tabs-background: white;
 $tabs-border-color: transparent;
 
-
+$img-placeholder-background: white;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -65,6 +65,8 @@ $label-ios-text-color: #263668;
 $tabs-ios-border: 0;
 $tabs-ios-tab-icon-color: #253568;
 $tabs-ios-tab-min-height: 58px;
+$datetime-ios-padding-top: 15px;
+$datetime-ios-padding-bottom: 15px;
 
 // App Material Design Variables
 // --------------------------------------------------
@@ -79,6 +81,8 @@ $text-input-md-margin-top: 15px;
 $datetime-md-padding-left: 0px;
 $label-md-text-color: #263668;
 $tabs-md-tab-min-height: 58px;
+$datetime-md-padding-top: 15px;
+$datetime-md-padding-bottom: 15px;
 
 // App Windows Variables
 // --------------------------------------------------
@@ -96,6 +100,8 @@ $text-input-wp-margin-top: 13px;
 $datetime-wp-padding-left: 0px;
 $label-wp-text-color: #263668;
 $tabs-wp-tab-min-height: 58px;
+$datetime-wp-padding-top: 15px;
+$datetime-wp-padding-bottom: 15px;
 
 // App Theme
 // --------------------------------------------------
