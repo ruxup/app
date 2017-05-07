@@ -20,6 +20,13 @@ $toolbar-border-color: transparent;
 $text-input-highlight-color-invalid: transparent;
 $text-input-highlight-color-valid: transparent;
 
+$text-input-placeholder-color: #96a4ba;
+
+$tabs-background: white;
+$tabs-border-color: transparent;
+
+
+
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -53,6 +60,11 @@ $text-input-ios-highlight-color-valid: transparent;
 $text-input-ios-highlight-color-invalid: transparent;
 $text-input-ios-margin-bottom: 13px;
 $text-input-ios-margin-top: 13px;
+$datetime-ios-padding-left: 0px;
+$label-ios-text-color: #263668;
+$tabs-ios-border: 0;
+$tabs-ios-tab-icon-color: #253568;
+$tabs-ios-tab-min-height: 58px;
 
 // App Material Design Variables
 // --------------------------------------------------
@@ -64,6 +76,9 @@ $toolbar-md-border-color: transparent;
 $text-input-md-show-focus-highlight: false;
 $text-input-md-margin-bottom: 15px;
 $text-input-md-margin-top: 15px;
+$datetime-md-padding-left: 0px;
+$label-md-text-color: #263668;
+$tabs-md-tab-min-height: 58px;
 
 // App Windows Variables
 // --------------------------------------------------
@@ -78,6 +93,9 @@ $text-input-wp-border-color: transparent;
 $text-input-wp-show-focus-highlight: false;
 $text-input-wp-margin-bottom: 13px;
 $text-input-wp-margin-top: 13px;
+$datetime-wp-padding-left: 0px;
+$label-wp-text-color: #263668;
+$tabs-wp-tab-min-height: 58px;
 
 // App Theme
 // --------------------------------------------------

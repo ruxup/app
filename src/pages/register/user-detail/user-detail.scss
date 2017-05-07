@@ -5,4 +5,18 @@
   background-color: #eef2f4;
   padding: 2em;
   font-weight: 300;
+  ion-label {
+    color: #263668;
+    padding: 5px;
+    font-weight: 500;
+  }
+
+  button {
+    margin-top: 55px;
+  }
+  .btn_gender {
+    border-radius: 5px;
+    background: white;
+    padding: 15px;
+  }
 }

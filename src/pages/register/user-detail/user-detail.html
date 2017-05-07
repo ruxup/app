@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Complete Your Profile</ion-title>
+    <ion-title>Complete Profile</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,16 +10,37 @@
     <ion-row align-items-center>
       <ion-col>
         <form [formGroup]="register" (ngSubmit)="logForm()">
+          <ion-label stacked>Name</ion-label>
           <ion-item>
-            <ion-input type="text" formControlName="email" placeholder="Name"></ion-input>
+            <ion-input type="text" formControlName="name" placeholder="Kimmy Kornelo"></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-input type="text" formControlName="password" placeholder="Date of Birth"></ion-input>
 
-          </ion-item>
+          <ion-label stacked>Date of Birth</ion-label>
           <ion-item>
-            <ion-input type="text" formControlName="password" placeholder="Location"></ion-input>
+            <ion-datetime placeholder="19 November 1996" displayFormat="D MMMM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}"></ion-datetime>
           </ion-item>
+
+          <ion-label stacked>Location</ion-label>
+          <ion-item>
+            <ion-input type="text" formControlName="location" placeholder="Location"></ion-input>
+          </ion-item>
+
+          <ion-label stacked>Select Gender</ion-label>
+
+          <ion-grid no-padding	>
+            <ion-row align-items-center>
+              <ion-col col-6 style="padding-right: 5px;">
+                <div class="btn_gender" style="border: 1px solid lime">
+                  Male
+                </div>
+              </ion-col>
+              <ion-col col-6 style="padding-left: 5px;">
+                <div class="btn_gender">
+                  Female
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
 
           <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Next</button>
 

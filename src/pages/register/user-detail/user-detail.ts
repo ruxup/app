@@ -15,11 +15,12 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class UserDetailPage {
   private register: FormGroup;
+  private dob: String;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
     this.register = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: [''],
+      name: ['', Validators.required],
+      dob: ['', Validators.required],
       location: ['', Validators.required],
     });
   }

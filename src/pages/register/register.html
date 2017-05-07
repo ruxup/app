@@ -8,7 +8,7 @@
     </ion-row>
     <ion-row class="forms" align-items-center>
       <ion-col>
-        <form [formGroup]="register" (ngSubmit)="logForm()">
+        <form [formGroup]="register" (ngSubmit)="next()">
           <ion-item [class.invalid]="!register.controls.email.valid && (register.controls.email.dirty)">
             <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
           </ion-item>

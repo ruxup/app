@@ -24,8 +24,9 @@ export class RegisterPage {
     });
   }
 
-  logForm(){
+  next(){
     console.log(this.register.value)
+    this.navCtrl.push('UserDetailPage')
   }
 
   ionViewDidLoad() {
