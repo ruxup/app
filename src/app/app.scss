@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/v2/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,43 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../assets/fonts/Proxima Nova Semibold-webfont.eot');
+  src: url('../assets/fonts/Proxima Nova Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       local('Proxima Nova Semibold'),
+       url('../assets/fonts/Proxima Nova Semibold-webfont.woff2') format('woff')
+}
+$font-family-md-base: "Proxima Nova Semibold";
+$font-family-ios-base: "Proxima Nova Semibold";
+$font-family-wp-base: "Proxima Nova Semibold";
+.item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.item-md,
+.item-wp,
+.item-ios {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  .item-inner {
+    border-bottom: 0;
+  }
+}
+
+ion-header {
+  font-family: 'Proxima Nova';
+  -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+.invalid {
+  -webkit-box-shadow: inset 0px 0px 0px 3px #f53d3d;
+  -moz-box-shadow: inset 0px 0px 0px 3px #f53d3d;
+  box-shadow: inset 0px 0px 0px 3px #f53d3d;
+}

@@ -1,0 +1,39 @@
+.page-interest {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-color: #eef2f4;
+  padding: 2em;
+  font-weight: 300;
+  ion-label {
+    color: #263668;
+    padding: 5px;
+    font-weight: 500;
+  }
+  button {
+    margin-top: 55px;
+  }
+  .btn_gender {
+    border-radius: 5px;
+    background: white;
+    padding: 5px;
+    &--male {
+      span {
+        font-weight: 700;
+        color: #263668;
+      }
+    }
+    &--female {
+      span {
+        font-weight: 700;
+        color: #d92f67;
+      }
+    }
+    &--active {
+      //border: 1px solid #c0d34b;
+      -webkit-box-shadow: inset 0px 0px 0px 2px #c0d34b;
+      -moz-box-shadow: inset 0px 0px 0px 2px #c0d34b;
+      box-shadow: inset 0px 0px 0px 2px #c0d34b;
+    }
+  }
+}

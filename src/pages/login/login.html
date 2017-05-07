@@ -1,0 +1,37 @@
+<ion-content padding class="page-login" [ngStyle]="{'background-image': 'url(assets/images/login_bg.png)'}">
+
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col class="logo">
+        <img class="logo__image" src="assets/images/logo.png" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row class="forms" align-items-center>
+      <ion-col>
+        <form [formGroup]="login" (ngSubmit)="logForm()">
+          <ion-item [class.invalid]="!login.controls.email.valid && (login.controls.email.dirty)">
+            <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
+          </ion-item>
+          <div class="forms__label--invalid" *ngIf="!login.controls.email.valid && (login.controls.email.dirty)">
+            <p>Please enter a valid email</p>
+          </div>
+          <ion-item [class.invalid]="!login.controls.password.valid && (login.controls.password.dirty)">
+            <ion-input type="password" formControlName="password" placeholder="Password" ></ion-input>
+          </ion-item>
+          <div class="forms__label--invalid" *ngIf="!login.controls.password.valid && (login.controls.password.dirty)">
+            <p>Please enter a valid password</p>
+          </div>
+          <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Login</button>
+
+        </form>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="footer">
+        <a class="footer__link" (click)="register()">
+        Don't have an account yet? <span>Register</span></a></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-content padding class="page-register" [ngStyle]="{'background-image': 'url(assets/images/register_bg.png)'}">
+
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col class="logo">
+        <img class="logo__image" src="assets/images/logo.png" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row class="forms" align-items-center>
+      <ion-col>
+        <form [formGroup]="register" (ngSubmit)="next()">
+          <ion-item [class.invalid]="!register.controls.email.valid && (register.controls.email.dirty)">
+            <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
+          </ion-item>
+          <div class="forms__label--invalid" *ngIf="!register.controls.email.valid && (register.controls.email.dirty)">
+            <p>Please enter a valid email</p>
+          </div>
+          <ion-item [class.invalid]="!register.controls.password.valid && (register.controls.password.dirty)">
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <div class="forms__label--invalid" *ngIf="!register.controls.password.valid && (register.controls.password.dirty)">
+            <p>Please enter a valid password</p>
+          </div>
+          <ion-item [class.invalid]="!register.controls.password_confirmation.valid && (register.controls.password_confirmation.dirty)">
+            <ion-input type="password" formControlName="password_confirmation" placeholder="Confirm Password"></ion-input>
+          </ion-item>
+          <div class="forms__label--invalid" *ngIf="!register.controls.password_confirmation.valid && (register.controls.password_confirmation.dirty)">
+            <p>Please re-enter a match password</p>
+          </div>
+
+          <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Register</button>
+
+        </form>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="footer">
+        <a class="footer__link" (click)="login()">
+        Already have an account? <span>Login</span></a></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
