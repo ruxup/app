@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Complete Your Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page-user-detail">
+  <ion-grid>
+
+    <ion-row align-items-center>
+      <ion-col>
+        <form [formGroup]="register" (ngSubmit)="logForm()">
+          <ion-item>
+            <ion-input type="text" formControlName="email" placeholder="Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" formControlName="password" placeholder="Date of Birth"></ion-input>
+
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" formControlName="password" placeholder="Location"></ion-input>
+          </ion-item>
+
+          <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Next</button>
+
+        </form>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

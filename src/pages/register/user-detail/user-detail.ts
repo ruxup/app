@@ -3,37 +3,37 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 /**
- * Generated class for the Login page.
+ * Generated class for the Register page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-user-detail',
+  templateUrl: 'user-detail.html',
 })
-export class LoginPage {
-  private todo: FormGroup;
+export class UserDetailPage {
+  private register: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
-    this.todo = this.formBuilder.group({
+    this.register = this.formBuilder.group({
       email: ['', Validators.required],
-      password: ['', Validators.required],
+      password: [''],
+      location: ['', Validators.required],
     });
   }
 
   logForm(){
-    console.log(this.todo.value)
+    console.log(this.register.value)
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Login');
+    console.log('ionViewDidLoad Register');
   }
 
-  register() {
-    console.log('clicked');
-    this.navCtrl.push('RegisterPage');
+  login(){
+    this.navCtrl.push('LoginPage');
   }
 
 }

@@ -1,0 +1,36 @@
+<ion-content padding class="page-register" [ngStyle]="{'background-image': 'url(assets/images/register_bg.png)'}">
+
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col class="logo">
+        <img class="logo__image" src="assets/images/logo.png" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row class="forms" align-items-center>
+      <ion-col>
+        <form [formGroup]="register" (ngSubmit)="logForm()">
+          <ion-item>
+            <ion-input type="text" formControlName="email" placeholder="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
+
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" formControlName="password" placeholder="confirm password"></ion-input>
+          </ion-item>
+
+          <button ion-button color="ruxup-base" class="forms__btn" type="submit" block>Register</button>
+
+        </form>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="footer">
+        <a class="footer__link" (click)="login()">
+        Already have an account? <span>Login</span></a></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

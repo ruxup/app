@@ -1,4 +1,4 @@
-.page-login {
+.page-register {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
@@ -16,22 +16,34 @@
     }
   }
   .forms {
-    p {
-      color: white;
-      text-align: right;
-    }
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 30px;
     padding: 16px;
-    &__label {
-      &--invalid {
-        p {
-        color: white;
-        text-align: right;
+    .button-group {
+      .ion-col {
+        &:first-child:not(:last-child) {
+          padding-right: 0;
+          .button {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
         }
-
+        &:not(:first-child):not(:last-child) {
+          padding-right: 0;
+          padding-left: 0;
+          .button {
+            border-radius: 0;
+          }
+        }
+        &:last-child:not(:first-child) {
+          padding-left: 0;
+          .button {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
       }
     }
     .ios {
@@ -47,7 +59,14 @@
       padding: 0 1em;
       height: 2.8em;
     }
-    
+    .item-md,
+    .item-ios {
+      border-radius: 5px;
+      margin-bottom: 10px;
+      .item-inner {
+        border-bottom: 0;
+      }
+    }
     .item-inner {
       border-bottom-color: transparent !important;
       box-shadow: none !important;
