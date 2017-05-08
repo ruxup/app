@@ -69,7 +69,10 @@ $tabs-ios-tab-min-height: 58px;
 $datetime-ios-padding-top: 15px;
 $datetime-ios-padding-bottom: 15px;
 $tabs-ios-tab-icon-size: 1.3em;
-
+$datetime-ios-placeholder-color: #96a4ba;
+$picker-ios-button-text-color: #263668;
+$picker-ios-border-color: transparent;
+$picker-ios-toolbar-background-color: white;
 
 // App Material Design Variables
 // --------------------------------------------------
@@ -87,6 +90,7 @@ $tabs-md-tab-min-height: 58px;
 $datetime-md-padding-top: 15px;
 $datetime-md-padding-bottom: 15px;
 $tabs-md-tab-icon-size: 3.5em;
+$datetime-md-placeholder-color: #96a4ba;
 
 // App Windows Variables
 // --------------------------------------------------
@@ -106,6 +110,8 @@ $label-wp-text-color: #263668;
 $tabs-wp-tab-min-height: 58px;
 $datetime-wp-padding-top: 15px;
 $datetime-wp-padding-bottom: 15px;
+$datetime-wp-placeholder-color: #96a4ba;
+
 
 // App Theme
 // --------------------------------------------------

@@ -30,7 +30,6 @@ export class RegisterPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Register');
   }
 
   login(){
