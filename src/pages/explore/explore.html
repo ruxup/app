@@ -1,11 +1,30 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar no-border-bottom>
     <ion-title>
       Explore
     </ion-title>
   </ion-navbar>
+
+  <ion-segment mode="md" [(ngModel)]="Filters">
+    <ion-segment-button value="location">
+      Location
+    </ion-segment-button>
+    <ion-segment-button value="category">
+      Category
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
 <ion-content class="page-explore" padding>
 
+  <div [ngSwitch]="Filters">
+    <ion-list *ngSwitchCase="'location'">
+      Search by location
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'category'">
+      Search by category
+
+    </ion-list>
+  </div>
 </ion-content>

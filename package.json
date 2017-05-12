@@ -1,8 +1,8 @@
 {
-  "name": "ionic-hello-world",
+  "name": "Ruxup Client",
   "version": "0.0.0",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Ruxup",
+  "homepage": "https://ruxup.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -43,5 +43,5 @@
     "cordova-plugin-splashscreen"
   ],
   "cordovaPlatforms": [],
-  "description": "ruxup: An Ionic project"
+  "description": "ruxup"
 }

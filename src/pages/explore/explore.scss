@@ -1,3 +1,22 @@
-.page-explore {
-    background: #f0f4f6;
-}
+ ion-segment {
+   background: white!important;
+ }
+
+ .segment-md {
+   background: white!important;
+   .segment-button {
+     color: #96a4ba;
+     text-transform: capitalize;
+   }
+   .segment-activated {
+     color: #29db60;
+   }
+ }
+
+ ion-segment-button {
+   color: black;
+ }
+
+ .page-explore {
+   background: #f0f4f6;
+ }
