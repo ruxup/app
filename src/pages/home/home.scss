@@ -1,33 +1,98 @@
 .page-home {
-    background: #f0f4f6;
-    ion-card {
+  background: #f0f4f6;
+  ion-card {
     position: relative;
     text-align: center;
+    border-radius: 5px;
   }
-
+  .card {
+    height: 175px;
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 2px;
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+    &-category {
+      position: absolute;
+      top: 10%;
+      left: 3%;
+      text-align: left;
+      width: 100%;
+      color: #fff;
+    }
+    &-member {
+      position: absolute;
+      top: 7%;
+      right: 3%;
+      ion-avatar {
+        display: inline-block;
+        margin-left: 3px;
+      }
+      img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    &-title {
+      position: absolute;
+      top: 36%;
+      left: 3%;
+      font-size: 2.0em;
+      width: 70%;
+      font-weight: 500;
+      color: #fff;
+      text-align: left;
+    }
+    &-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      left: 3%;
+      bottom: 10%;
+      width: 100%;
+      color: #fff;
+      text-align: left;
+    }
+    &-date {
+      font-size: 1.0em;
+      width: 100%;
+      color: #fff;
+    }
+    &-location {
+      font-size: 1.0em;
+      margin-left: 5px;
+      width: 100%;
+      color: #fff;
+    }
+    &-image {
+      &:before {
+        background: black;
+        opacity: 0.3;
+        width: 100%;
+      }
+    }
+    
+  }
   .slides {
     .swiper-pagination-bullet {
-          background: #ffffff;
-          &-active{
-                background: #ffffff;
-          }
+      background: #ffffff;
+      &-active {
+        background: #ffffff;
+      }
     }
   }
-
-  .card-title {
-    position: absolute;
-    top: 36%;
-    font-size: 2.0em;
-    width: 100%;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .card-subtitle {
-    font-size: 1.0em;
-    position: absolute;
-    top: 52%;
-    width: 100%;
-    color: #fff;
+  .timeline {
+    .time {
+      margin-left: 10px;
+      margin-bottom: 0;
+      color: #263668;
+    }
   }
 }
