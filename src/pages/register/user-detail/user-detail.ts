@@ -15,7 +15,6 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class UserDetailPage {
   private register: FormGroup;
-  private dob: String;
   private selectedGender: String;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
