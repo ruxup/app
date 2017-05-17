@@ -5,6 +5,15 @@
     text-align: center;
   }
 
+  .slides {
+    .swiper-pagination-bullet {
+          background: #ffffff;
+          &-active{
+                background: #ffffff;
+          }
+    }
+  }
+
   .card-title {
     position: absolute;
     top: 36%;

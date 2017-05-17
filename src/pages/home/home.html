@@ -4,29 +4,23 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="page-home">
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-saopaolo.png" />
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-amsterdam.png" />
-    <div class="card-title">Amsterdam</div>
-    <div class="card-subtitle">64 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-sf.png" />
-    <div class="card-title">San Francisco</div>
-    <div class="card-subtitle">72 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-madison.png" />
-    <div class="card-title">Madison</div>
-    <div class="card-subtitle">28 Listings</div>
-  </ion-card>
-
+<ion-content no-padding class="page-home">
+  <ion-grid text-center no-padding no-margin class="event__container">
+        <ion-row>
+            <ion-col class="slides" width-100 no-padding>
+                <ion-slides pager>
+                    <ion-slide>
+                        <img class="img-responsive" src="assets/images/slides/explore.png" />
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="img-responsive" src="assets/images/slides/create-event.png" />
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="img-responsive" src="assets/images/slides/enjoy-ruxup.png" />
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+        </ion-row>
+      
+    </ion-grid>
 </ion-content>
