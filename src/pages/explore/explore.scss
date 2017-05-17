@@ -19,4 +19,27 @@
 
  .page-explore {
    background: #f0f4f6;
+
+  ion-card {
+        position: relative;
+        border-radius: 5px;
+        height: 80px;
+        img {
+            margin-top: -10%;
+        }
+    }
+    .item-inner {
+        border-bottom: none!important;
+    }
+    .card-title {
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 1.2em;
+        font-weight: 500;
+        color: #fff;
+        line-height: 1;
+    }
  }
