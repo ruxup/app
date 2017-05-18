@@ -7,5 +7,40 @@
 </ion-header>
 
 <ion-content class="page-create-event" padding>
+<form (ngSubmit)='create()'>
+            <ion-item class="page-create-event__forms--input">
+                <ion-label stacked>Event Name</ion-label>
+                <ion-input name="name" type="name" [(ngModel)]="event.name" placeholder="Your Event"></ion-input>
+            </ion-item>
+            <ion-item class="page-create-event__forms--input">
+                <ion-label floating>Category</ion-label>
+                <ion-select name="category" [(ngModel)]="event.category" type="text">
+                    <ion-option>Food</ion-option>
+                    <ion-option>Music</ion-option>
+                    <ion-option>Party</ion-option>
+                    <ion-option>Sport</ion-option>
+                    <ion-option>Travel</ion-option>
+                </ion-select>
+            </ion-item>
 
+            <ion-item class="page-create-event__forms--input">
+                <ion-label stacked>Start Date</ion-label>
+                <ion-datetime displayFormat="D MMM YYYY" min="{{startDate}}" max="2018-12-31" [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}"></ion-datetime>
+            </ion-item>
+            <ion-item class="page-create-event__forms--input">
+                <ion-label stacked>End Date</ion-label>
+                <ion-datetime displayFormat="D MMM YYYY" min="2016" max="2018-12-31" [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}"></ion-datetime>
+            </ion-item>
+
+            <ion-item (click)="openCountry()" class="page-create-event__forms--input">
+                <ion-label stacked>Location</ion-label>
+                <ion-input name="location" [(ngModel)]="event.location" type="text"></ion-input>
+            </ion-item>
+            <ion-item class="page-create-event__forms--input">
+                <ion-label stacked>Description</ion-label>
+                <ion-textarea name="description" [(ngModel)]="event.description" rows="6" placeholder="enter event description here..."></ion-textarea>
+            </ion-item>
+
+            <button ion-button block  class="page-create-event__forms--button dark-grey" type="submit">Create Event</button>
+        </form>
 </ion-content>
