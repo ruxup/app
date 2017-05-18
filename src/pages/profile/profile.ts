@@ -8,7 +8,7 @@ import { IonicPage } from 'ionic-angular';
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
-
+Filters: string = "bio";
   constructor(public navCtrl: NavController) {
 
   }

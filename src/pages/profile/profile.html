@@ -1,11 +1,92 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Profile
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content class="page-profile">
+  <button ion-button icon-only style="position:absolute; top:0; right:0; background: transparent;">
+  <ion-icon name="settings"></ion-icon>
+      </button>
+  <div class="profile__cover" [ngStyle]="{'background-image': 'url(/assets/images/profile/background.jpg)'}">
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <img class="profile__avatar" src="https://ionicframework.com/dist/preview-app/www/assets/img/venkman.jpg" alt="">
+          <h2 class="profile__name" no-padding no-margin>Raditya</h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-segment mode="md" [(ngModel)]="Filters">
+    <ion-segment-button value="bio">
+      Bio
+    </ion-segment-button>
+    <ion-segment-button value="events">
+      Events
+    </ion-segment-button>
+  </ion-segment>
 
-<ion-content class="page-profile" padding>
+  <div padding [ngSwitch]="Filters">
 
+    <ion-row id="search-event"  *ngSwitchCase="'bio'">
+      
+      <ion-item>
+        <ion-label>
+          Email
+        </ion-label>
+        <div item-content>
+          radit@ruxup.com
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          City
+        </ion-label>
+        <div item-content>
+          Eindhoven, The Netherlands
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Nationality
+        </ion-label>
+        <div item-content>
+          Indonesian
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Phone
+        </ion-label>
+        <div item-content>
+          +31 629 354 18
+        </div>
+      </ion-item>
+    </ion-row>
+
+    <ion-row *ngSwitchCase="'events'">
+
+      <ion-card>
+        <img class="img-responsive" src="assets/images/categories/food.jpg" />
+        <div class="overlay"></div>
+        <div class="card-title">#Food</div>
+      </ion-card>
+      <ion-card>
+        <img class="img-responsive" src="assets/images/categories/music.jpg" />
+        <div class="overlay"></div>
+        <div class="card-title">#Music</div>
+      </ion-card>
+      <ion-card>
+        <img class="img-responsive" src="assets/images/categories/party.jpg" />
+        <div class="overlay"></div>
+        <div class="card-title">#Party</div>
+      </ion-card>
+      <ion-card>
+        <img class="img-responsive" src="assets/images/categories/sport.jpg" />
+        <div class="overlay"></div>
+        <div class="card-title">#Sport</div>
+      </ion-card>
+      <ion-card>
+        <img class="img-responsive" src="assets/images/categories/Travel.jpg" />
+        <div class="overlay"></div>
+        <div class="card-title">#Travel</div>
+      </ion-card>
+    </ion-row>
+
+  </div>
 </ion-content>
