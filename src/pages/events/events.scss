@@ -1,3 +1,66 @@
 .page-events {
   background: #f0f4f6;
+  ion-card {
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+  }
+  ion-avatar {
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+  .event {
+    &-category {
+      position: absolute;
+      top: 110px;
+      left: 5%;
+      text-align: left;
+      width: 100%;
+      color: #fff;
+    }
+    &-title {
+      position: absolute;
+      top: 130px;
+      left: 5%;
+      font-size: 2.0em;
+      width: 60%;
+      font-weight: 500;
+      color: #fff;
+      text-align: left;
+    }
+    &-btn {
+      position: absolute;
+      right: 5%;
+      top: 140px;
+    }
+  }
+}
+
+.profile {
+  &__cover {
+    background-repeat: no-repeat;
+    height: 220px;
+    background-size: cover;
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+  }
+}
+
+.segment-ios .segment-button:first-of-type {
+  margin-right: 0;
+  border-radius: 0px 0 0 0px;
+  border-left: none;
+}
+
+.segment-ios .segment-button:last-of-type {
+  margin-left: 0;
+  border-left-width: 0;
+  border-radius: 0px 0 0 0px;
+  border-right: none;
 }

@@ -32,4 +32,9 @@ export class ExplorePage {
     modal.present();
   }
 
+  search(): void {
+        this.navCtrl.push('ExploreResultsPage')
+
+  }
+
 }

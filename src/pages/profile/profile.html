@@ -23,68 +23,61 @@
 
   <div padding [ngSwitch]="Filters">
 
-    <ion-row id="search-event"  *ngSwitchCase="'bio'">
-      
+    <ion-row id="search-event" *ngSwitchCase="'bio'">
+      <div>
+        <ion-label style="color: #263668; font-weight: bold;">Email</ion-label>
+      </div>
       <ion-item>
-        <ion-label>
-          Email
-        </ion-label>
-        <div item-content>
-          radit@ruxup.com
-        </div>
+        radit@ruxup.com
       </ion-item>
+      <div>
+        <ion-label style="color: #263668; font-weight: bold;">City</ion-label>
+      </div>
       <ion-item>
-        <ion-label>
-          City
-        </ion-label>
-        <div item-content>
-          Eindhoven, The Netherlands
-        </div>
+        Eindhoven, The Netherlands
       </ion-item>
+      <div>
+        <ion-label style="color: #263668; font-weight: bold;">Nationality</ion-label>
+      </div>
       <ion-item>
-        <ion-label>
-          Nationality
-        </ion-label>
-        <div item-content>
-          Indonesian
-        </div>
-      </ion-item>
+        Indonesian </ion-item>
+      <div>
+        <ion-label style="color: #263668; font-weight: bold;">Phone</ion-label>
+      </div>
       <ion-item>
-        <ion-label>
-          Phone
-        </ion-label>
-        <div item-content>
-          +31 629 354 18
-        </div>
+        +31 629 354 18
       </ion-item>
+
+
     </ion-row>
 
     <ion-row *ngSwitchCase="'events'">
 
-      <ion-card>
-        <img class="img-responsive" src="assets/images/categories/food.jpg" />
+      <ion-card class="card" (click)="open()">
+        <img class="card-image" src="/assets/images/post/monalisa.jpg" />
         <div class="overlay"></div>
-        <div class="card-title">#Food</div>
-      </ion-card>
-      <ion-card>
-        <img class="img-responsive" src="assets/images/categories/music.jpg" />
-        <div class="overlay"></div>
-        <div class="card-title">#Music</div>
-      </ion-card>
-      <ion-card>
-        <img class="img-responsive" src="assets/images/categories/party.jpg" />
-        <div class="overlay"></div>
-        <div class="card-title">#Party</div>
-      </ion-card>
-      <ion-card>
-        <img class="img-responsive" src="assets/images/categories/sport.jpg" />
-        <div class="overlay"></div>
-        <div class="card-title">#Sport</div>
-      </ion-card>
-      <ion-card>
-        <img class="img-responsive" src="assets/images/categories/Travel.jpg" />
-        <div class="overlay"></div>
-        <div class="card-title">#Travel</div>
+
+        <div class="card-category">#sightseeing</div>
+        <div class="card-member">
+          <ion-avatar>
+            <img src="https://ionicframework.com/dist/preview-app/www/assets/img/venkman.jpg">
+          </ion-avatar>
+          <ion-avatar>
+            <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-han.png">
+          </ion-avatar>
+
+        </div>
+        <div class="card-title">Selfie With Mona Lisa</div>
+        <div class="card-subtitle">
+          <span class="card-date">   
+            <ion-icon name="calendar"></ion-icon>
+            19-20 May 2017 
+          </span>
+          <span class="card-location">           
+            <ion-icon name="pin"></ion-icon>
+            Paris, France
+            </span>
+        </div>
       </ion-card>
     </ion-row>
 

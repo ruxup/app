@@ -1,29 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Timeline</ion-title>
+    <ion-title>
+      My Events
+    </ion-title>
+
+
   </ion-navbar>
 </ion-header>
 
-<ion-content no-padding class="page-home">
+<ion-content class="page-list-events" padding>
   <ion-grid text-center no-padding no-margin class="event__container">
-    <ion-row style="display:block;">
-      <ion-col class="slides" width-100 no-padding>
-        <ion-slides pager>
-          <ion-slide>
-            <img class="img-responsive" src="assets/images/slides/explore.png" />
-          </ion-slide>
-          <ion-slide>
-            <img class="img-responsive" src="assets/images/slides/create-event.png" />
-          </ion-slide>
-          <ion-slide>
-            <img class="img-responsive" src="assets/images/slides/enjoy-ruxup.png" />
-          </ion-slide>
-        </ion-slides>
-      </ion-col>
-    </ion-row>
     <ion-row class="timeline">
-      <h6 class="time">Today</h6>
-      <ion-card class="card" (click)="openEvent()">
+      <h6 class="time">Soon</h6>
+      <ion-card class="card" (click)="openEvent()" >
         <img class="card-image" src="/assets/images/post/monalisa.jpg" />
         <div class="overlay"></div>
 
@@ -77,8 +66,8 @@
             </span>
         </div>
       </ion-card>
-      
-      
     </ion-row>
   </ion-grid>
+
+
 </ion-content>

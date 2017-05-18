@@ -1,13 +1,96 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      My Events
-    </ion-title>
+<ion-content no-padding class="page-events">
+  <button (click)="back()" ion-button icon-only style="position:absolute; top:0; left:0; background: transparent;">
+  <ion-icon name="arrow-back"></ion-icon>
+      </button>
+  <button ion-button icon-only style="position:absolute; top:0; right:0; background: transparent;">
+  <ion-icon name="settings"></ion-icon>
+      </button>
+
+  <div class="event-category">
+    #sightseeing
+  </div>
+  <div class="event-title">
+    Selfie with Mona Lisa
+  </div>
+  <button class="event-btn" ion-button color="secondary" round>Join</button>
+
+  <div class="profile__cover" [ngStyle]="{'background-image': 'url(/assets/images/post/monalisa.jpg)'}">
+  </div>
+  <ion-segment mode="md" [(ngModel)]="Filters">
+    <ion-segment-button value="detail">
+      Detail
+    </ion-segment-button>
+    <ion-segment-button value="member">
+      Member
+    </ion-segment-button>
+  </ion-segment>
+
+  <div padding [ngSwitch]="Filters">
+
+    <ion-row id="search-event" *ngSwitchCase="'detail'">
+      <ion-col col-6>
+        <div>
+          <ion-label style="color: #263668; font-weight: bold;">Start</ion-label>
+        </div>
+        <ion-item>
+          19 May 2017
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <div>
+          <ion-label style="color: #263668; font-weight: bold;">End</ion-label>
+        </div>
+        <ion-item>
+          20 May 2017
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-12>
+        <div>
+          <ion-label style="color: #263668; font-weight: bold;">Location</ion-label>
+        </div>
+        <ion-item>
+          Paris, France
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-12>
+        <div>
+          <ion-label style="color: #263668; font-weight: bold;">Desciption</ion-label>
+        </div>
+        <div padding center style="background: white; border-radius: 5px;">
+          <p style="font-size:17px; padding: 0; margin: 0"> The Mona Lisa is a half-length portrait of Lisa Gherardini by the Italian Renaissance artist Leonardo da Vinci,
+            which has been described as "the best known, the most visited, the most written about</p>
+        </div>
 
 
-  </ion-navbar>
-</ion-header>
+      </ion-col>
 
-<ion-content class="page-events" padding>
 
+
+
+    </ion-row>
+
+    <ion-row *ngSwitchCase="'member'">
+
+      <ion-col col-6>
+        <div padding center style="height: 170px; background: white; border-radius: 5px;">
+          <ion-avatar>
+            <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-rey.png">
+          </ion-avatar>
+          <h6 style="color: #263668; font-weight: 400; text-align:center">Dadang Konelo</h6>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div padding center style="height: 170px; background: white; border-radius: 5px;">
+          <ion-avatar>
+            <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-han.png">
+          </ion-avatar>
+          <h6 style="color: #263668; font-weight: 400; text-align:center">Jajang Serbet</h6>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+  </div>
 </ion-content>

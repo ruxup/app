@@ -4,18 +4,18 @@ import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-events',
-  templateUrl: 'events.html'
+  selector: 'page-list-events',
+  templateUrl: 'list.html'
 })
-export class EventsPage {
-  Filters: string = "detail";
+export class ListEventsPage {
 
   constructor(public navCtrl: NavController) {
 
   }
 
-  back(): void {
-    this.navCtrl.pop();
-  }
+  openEvent(): void {
+        console.log('open event');
+        this.navCtrl.push('EventsPage');
+    }
 
 }

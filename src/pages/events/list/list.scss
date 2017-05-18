@@ -1,5 +1,12 @@
-.page-home {
+.page-list-events {
   background: #f0f4f6;
+  .timeline {
+    .time {
+      margin-left: 10px;
+      margin-bottom: 0;
+      color: #263668;
+    }
+  }
   ion-card {
     position: relative;
     text-align: center;
@@ -77,21 +84,6 @@
         opacity: 0.3;
         width: 100%;
       }
-    }
-  }
-  .slides {
-    .swiper-pagination-bullet {
-      background: #ffffff;
-      &-active {
-        background: #ffffff;
-      }
-    }
-  }
-  .timeline {
-    .time {
-      margin-left: 10px;
-      margin-bottom: 0;
-      color: #263668;
     }
   }
 }

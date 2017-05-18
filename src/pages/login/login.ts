@@ -33,7 +33,7 @@ export class LoginPage {
 
   login() {
     console.log(this.loginForm.value);
-    this.presentLoader();
+    this.navCtrl.push('TabsPage');
   }
 
   ionViewDidLoad() {

@@ -1,0 +1,48 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons mode="ios" start>
+      <button (click)="back()" mode="ios" ion-button icon-only>
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="page-explore-results">
+  <div>
+    <ion-label style="color: #263668; font-weight: 500;">Recent Search</ion-label>
+  </div>
+  <ion-col col-12>
+    <ion-chip #chip1>
+      <ion-label>Bali</ion-label>
+    </ion-chip>
+    <ion-chip #chip1>
+      <ion-label>Great Wall China</ion-label>
+    </ion-chip>
+    <ion-chip #chip1>
+      <ion-label>Tokyo</ion-label>
+    </ion-chip>
+        <ion-chip #chip1>
+      <ion-label>Super awesome </ion-label>
+    </ion-chip>
+  </ion-col>
+
+
+
+  <div>
+    <ion-label style="color: #263668; font-weight: 500;">Results</ion-label>
+  </div>
+
+<ion-list>
+  <ion-item (click)="openEvent()">
+    <ion-thumbnail item-left>
+      <img src="/assets/images/post/monalisa.jpg">
+    </ion-thumbnail>
+    <h2>    Selfie with Mona Lisa
+</h2>
+    <p>Paris, France • 19-20 May</p>
+    <p>2 Members</p>
+    <button ion-button clear item-right>Join</button>
+  </ion-item>
+</ion-list>
+</ion-content>

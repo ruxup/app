@@ -35,7 +35,7 @@ export class UserDetailPage {
   }
 
   next(){
-    this.navCtrl.push('InterestPage');
+    this.navCtrl.push('TabsPage');
   }
 
   chooseGender(gender: String) {

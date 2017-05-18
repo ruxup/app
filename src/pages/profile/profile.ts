@@ -13,4 +13,9 @@ Filters: string = "bio";
 
   }
 
+  open(): void {
+        console.log('open event');
+        this.navCtrl.push('EventsPage');
+    }
+
 }

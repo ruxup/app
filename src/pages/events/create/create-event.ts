@@ -32,8 +32,10 @@ export class CreateEventPage {
   }
 
   create(): void {
-    this.event.start = this.formatDate(this.startDate);
-    this.event.end = this.formatDate(this.endDate); 
+    // this.event.start = this.formatDate(this.startDate);
+    // this.event.end = this.formatDate(this.endDate); 
+            this.navCtrl.push('EventsPage');
+
   }
 
   formatDate(d: String): String {
@@ -53,6 +55,11 @@ export class CreateEventPage {
    });
        modal.present();
   }
+
+  openEvent(): void {
+        console.log('open event');
+        this.navCtrl.push('EventsPage');
+    }
 
   
 }

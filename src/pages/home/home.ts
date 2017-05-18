@@ -28,4 +28,9 @@ export class HomePage {
     // this.slides.effect = "fade";
   }
 
+  openEvent(): void {
+        console.log('open event');
+        this.navCtrl.push('EventsPage');
+    }
+
 }
