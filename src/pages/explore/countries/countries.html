@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-toolbar color="primary">
+      <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+    </ion-toolbar>
+
+  </ion-toolbar>
+
+</ion-header>
+<ion-content padding class="page-edit-profile">
+
+  <ion-list class="page-create-event__forms">
+
+    <ion-list>
+      <button ion-item *ngFor="let c of countries" (click)="save(c?.name)">
+                {{c?.name}}
+            </button>
+    </ion-list>
+  </ion-list>
+</ion-content>

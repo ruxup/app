@@ -8,9 +8,13 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { CountriesPage } from '../pages/explore/countries/countries';
+
+
 @NgModule({
   declarations: [
     MyApp,
+    CountriesPage
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    CountriesPage
   ],
   providers: [
     StatusBar,

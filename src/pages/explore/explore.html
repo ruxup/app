@@ -18,11 +18,36 @@
 <ion-content class="page-explore">
 
   <div [ngSwitch]="Filters">
-    <ion-list *ngSwitchCase="'location'">
-      Search by location
-    </ion-list>
+
+
+    <ion-row id="search-event" no-padding *ngSwitchCase="'location'">
+            <ion-col padding>
+                <ion-item>
+                    <ion-icon name="ios-information-circle-outline"></ion-icon>
+                    <ion-input type="text" placeholder="Search"></ion-input>
+                </ion-item>
+                <ion-list style="margin-top:10px;">
+                    <ion-item style="border-top:0">
+                        <ion-label stacked>Start Date</ion-label>
+                        <ion-datetime displayFormat="D MMM YYYY" min="{{startDate}}" max="2018-12-31" [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}"></ion-datetime>
+                    </ion-item>
+
+                    <ion-item (click)="openCountry()" style="margin-top:10px; border-bottom:0">
+                        <ion-input name="location" [(ngModel)]="location" type="text" placeholder="Location"></ion-input>
+                    </ion-item>
+                    
+
+
+                </ion-list>
+
+                <button (click)="search()" ion-button block> 
+                        Search
+                    </button>
+            </ion-col>
+        </ion-row>
 
     <ion-row  *ngSwitchCase="'category'">
+
             <ion-card>
                 <img class="img-responsive" src="assets/images/categories/food.jpg" />
                 <div class="overlay"></div>
